@@ -18,7 +18,7 @@ async function searchGif(e) {
             for(let i=0; i<list.results.length; i++){
                 html += `
                 <div class="col-md-4 d-flex justify-content-center align-items-center">                        
-                    <img class="img-thumbnail" src="${list.results[i].media_formats.mediumgif.url}" />
+                    <img class="img-thumbnail" src="${list.results[i].media_formats.tinygif.url}" />
                 </div>
             `;
             }
