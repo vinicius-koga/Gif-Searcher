@@ -6,10 +6,10 @@ document.querySelector('.SearchGifBtn').addEventListener('click', checkInput);
 async function searchGif(e) {
     let input = document.querySelector('.searchGif');
     if (input.value != '' && (e.key === 'Enter' || e.type === 'click')) {
+        document.querySelector('.gifs').innerHTML = `<p class="text-center">Procurando...</p>`;
+
         let req = await fetch(`https://tenor.googleapis.com/v2/search?q=${input.value}&key=AIzaSyD0Gtagyi2BUKkJ-pwVD8irjgHq3kABbcQ&limit=8`)
         let reqJson = await req.json();
-
-        document.querySelector('.gifs').innerHTML = `<p class="text-center">Searching...</p>`;
 
         showGifs(reqJson);
 
