@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>GIFSearch</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-</head>
-<body>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre o site</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" style="line-height: 35px;">
-            Site que faz buscas por GIF's utilizando fetch(API)<br>
-            <hr>
-            Tecnologias utilizadas:<br>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JAVASCRIPT</li>
-                <li>BOOTSTRAP v5.2</li>
-            </ul>
-            <hr>
-            Para mais informações sobre a API utilizada acesse: <a href="https://tenor.com/gifapi/documentation#quickstart" target="_blank">tenorAPI</a>.
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <header>
-        <div class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a href="" class="text-decoration-none">
-                    <div class="navbar-brand mx-2">GIFSearch</div>
-                </a>
-                <nav>
-                    <a href="#" class="text-white text-decoration-none mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre o site</a>
-                </nav>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      />
+      <title>GIFSearch</title>
+      <link rel="stylesheet" href="assets/css/bootstrap.css" />
+   </head>
+   <body>
+      <div
+         class="modal fade"
+         id="exampleModal"
+         tabindex="-1"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true"
+      >
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                     Sobre o site
+                  </h1>
+                  <button
+                     type="button"
+                     class="btn-close"
+                     data-bs-dismiss="modal"
+                     aria-label="Close"
+                  ></button>
+               </div>
+               <div class="modal-body" style="line-height: 35px">
+                  Site que faz buscas por GIF's utilizando fetch(API)<br />
+                  <hr />
+                  Tecnologias utilizadas:<br />
+                  <ul>
+                     <li>HTML5</li>
+                     <li>CSS3</li>
+                     <li>JAVASCRIPT</li>
+                     <li>BOOTSTRAP v5.2</li>
+                  </ul>
+                  <hr />
+                  Para mais informações sobre a API utilizada acesse:
+                  <a
+                     href="https://tenor.com/gifapi/documentation#quickstart"
+                     target="_blank"
+                     >tenorAPI</a
+                  >.
+               </div>
+               <div class="modal-footer">
+                  <button
+                     type="button"
+                     class="btn btn-dark"
+                     data-bs-dismiss="modal"
+                  >
+                     Close
+                  </button>
+               </div>
             </div>
-        </div>
-    </header>
+         </div>
+      </div>
 
-    <section class="container-fluid text-center py-4 bg-secondary bg-opacity-25 mb-3">
-        <div class="container d-flex flex-column align-items-center">
+      <div class="modal fade" id="gifModal" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button
+                     type="button"
+                     class="btn-close shadow-none"
+                     data-bs-dismiss="modal"
+                     aria-label="Close"
+                  ></button>
+               </div>
+               <div class="modal-body text-center"></div>
+               <div class="modal-footer"></div>
+            </div>
+         </div>
+      </div>
+
+      <header>
+         <div class="navbar navbar-dark bg-dark">
+            <div class="container-fluid px-2 px-md-4">
+               <a href="" class="text-decoration-none">
+                  <div class="navbar-brand mx-2">GIFSearch</div>
+               </a>
+               <nav>
+                  <a
+                     href="#"
+                     class="text-white text-decoration-none mx-2"
+                     data-bs-toggle="modal"
+                     data-bs-target="#exampleModal"
+                     >Sobre o site</a
+                  >
+               </nav>
+            </div>
+         </div>
+      </header>
+
+      <section
+         class="container-fluid text-center py-4 bg-secondary bg-opacity-25 mb-3"
+      >
+         <div class="container d-flex flex-column align-items-center">
             <h3 class="mb-3">Procurar GIF's</h3>
-            <div class="inputBox" style="max-width: 400px; width: 100%;">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control searchGif shadow-none" placeholder="Escreva algo..." aria-label="Escreva algo" aria-describedby="button-addon2">
-                    <button class="btn btn-dark SearchGifBtn" type="button" id="button-addon2">Search</button>
-                </div>
+            <div class="inputBox" style="max-width: 400px; width: 100%">
+               <div class="input-group mb-3">
+                  <input
+                     type="text"
+                     class="form-control searchGif shadow-none"
+                     placeholder="Escreva algo..."
+                     aria-label="Escreva algo"
+                     aria-describedby="button-addon2"
+                  />
+                  <button
+                     class="btn btn-dark SearchGifBtn"
+                     type="button"
+                     id="button-addon2"
+                  >
+                     Search
+                  </button>
+               </div>
             </div>
-        </div>
-    </section>
+         </div>
+      </section>
 
-    <section>
-        <div class="container" style="width: 100%;">
-            <div class="row gifs" style="margin-bottom: 80px;">
+      <section>
+         <div class="container" style="width: 100%">
+            <div class="row gifs" style="margin-bottom: 80px"></div>
+         </div>
+      </section>
 
-            </div>
-        </div>
-    </section>
+      <footer class="text-center w-100 pb-3 position-fixed bottom-0 bg-white">
+         <hr style="margin-top: 0" />
+         © Copyright |
+         <a href="https://github.com/vinicius-koga" target="_blank"
+            >Vinicius Koga</a
+         >
+      </footer>
 
-    <footer class="text-center w-100 pb-3 position-fixed bottom-0 bg-white">
-        <hr style="margin-top: 0;">
-        © Copyright | <a href="https://github.com/vinicius-koga" target="_blank">Vinicius Koga</a>
-    </footer>
-
-
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/script.js"></script>
+   </body>
 </html>
