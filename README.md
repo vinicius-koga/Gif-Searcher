@@ -1,6 +1,6 @@
 # Gif Searcher
 
-### Site que faz buscas por GIF's utilizando fetch(API)<br>
+#### Site que faz buscas por GIF's utilizando fetch(API)<br>
 
 ### Tecnologias utilizadas:
 <ul>
