@@ -10,4 +10,6 @@
     <li>BOOTSTRAP v5.2</li>
 </ul>
 
+### Este site é responsivo à dispositivos mobile
+
 Para mais informações sobre a API utilizada acesse: <a href="https://tenor.com/gifapi/documentation#quickstart" target="_blank">tenorAPI</a>.
